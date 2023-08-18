@@ -1,0 +1,433 @@
+html,
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --primary-color: #032859;
+    --primary-color2: #07598C;
+    --title-color: #0879a6;
+    --text-color: #0a9ebf;
+    --border-color: #4d6cfa;
+    --gradient-color: linear-gradient(90deg, #07598C 0%, #0a9ebf 100%);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+.imgLogo {
+    height: 100px;
+}
+
+.img-fluid2 {
+    height: 450px;
+}
+
+.img-fluid3 {
+    height: 450px;
+    width: 500px;
+}
+
+.img1 {
+    width: 100px;
+    height: 100px;
+}
+
+.img2 {
+    width: 100px;
+    height: 100px;
+}
+
+.img3 {
+    width: 100px;
+    height: 100px;
+}
+
+.img4 {
+    width: 100px;
+    height: 100px;
+}
+
+/*Inicio header*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.5s;
+}
+
+body {
+    min-height: 100vh;
+    /*background: url('https://www.codigonuevo.com/binrepository/captura-pantalla-2020-10-23-10-02-15-1200x774_CN301838_MG11451330.png') no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.encabezado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 128, 248, 0.514);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.encabezado::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+}
+
+.encabezado:hover::after {
+    left: 100%;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+.navbar a {
+    font-size: 1.10rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media(max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(17, 90, 247, 0.2);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+        
+    }
+
+    #check:checked~.navbar {
+        height: 19.7rem;
+    }
+
+
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+
+/*fin heqder*/
+
+/*inicion footer*/
+
+footer{
+    width: 100%;
+    position:absolute;
+  
+    left: 0;
+    background-color: #1a5eb848;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 8%; 
+    align-items: center;
+    flex-direction:column;
+}
+
+/*.Logo2{
+    height: 80px;
+    margin-bottom: 1rem;
+}*/
+
+.redes-sociales,.pie-pag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-image: url("../IMG/usuario.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    margin: 0.5rem;
+}
+
+.social-icon:hover{
+    background-color: #C8AE7D;
+    filter: invert(1);
+}
+
+.social-icon:nth-of-type(2){
+    background-image: url("../IMG/instagram.png");
+}
+
+.social-icon:nth-of-type(3){
+    background-image: url("../IMG/messenger.png");
+}
+.social-icon:nth-of-type(4){
+    background-image: url("../IMG/WhatsApp.png");
+}
+
+.pie-pag{
+    list-style-type: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.menu-item{
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover{
+    opacity: 1;
+}
+
+.copyright{
+    color: brown;
+    opacity: 0.3;
+    text-align: center;
+}  
+
+
+/*Final footer*/
+
+
+.site-main .site-banner .site-title h3 {
+    padding-top: 15%;
+    font-weight: 300;
+}
+
+.site-main .site-banner .site-title h3::after {
+    content: "";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1 {
+    font-size: 3rem;
+}
+
+.site-main .site-banner .site-title h4 {
+    font-size: 1.5rem;
+}
+
+.site-main .site-banner .banner-image>img {
+    padding: 6rem 0;
+    width: 90rem;
+}
+
+.title-text {
+    font: normal bold 50px/72px Arial, Helvetica, sans-serif;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.button {
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px Arial, Helvetica, sans-serif;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+.button.primary-button {
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.button.primary-button:hover {
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+
+.button.primary-button::after,
+.button.secondary-button::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: var(--gradient-color);
+    content: '';
+    z-index: -1;
+    border-radius: 4;
+}
+
+.button.secondary-button {
+    background: white;
+    background-clip: padding-box;
+    transition: background .6s ease;
+}
+
+.button.secondary-button:hover {
+    background: var(--gradient-color);
+    color: whitesmoke;
+    box-shadow: var(--gradient-color);
+}
+
+.site-main .about-area {
+    padding: 8rem 1rem;
+
+}
+
+.site-main .about-area .about-title h2>span {
+    display: block;
+    font: normal bold 29px/60px Arial, Helvetica, sans-serif;
+    letter-spacing: 11px;
+}
+
+.site-main .about-area .about-title .paragraph>p {
+    padding: 0;
+}
+
+p.para {
+    color: var(--primary-color);
+    font: normal 400 16px/25px Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.order form {
+    width: 80rem;
+    border-radius: .5rem;
+    box-shadow: var(--border-color);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    background: #fff;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.order form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input {
+    width: 49%;
+}
+
+.order form .inputBox .input span {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea {
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-color2);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 85%;
+}
+
+.order form .inputBox .input textarea {
+    height: 15rem;
+    resize: none;
+}
